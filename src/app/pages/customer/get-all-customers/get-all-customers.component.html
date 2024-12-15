@@ -1,0 +1,27 @@
+<div class="container">
+    <div class="customers">
+        <h1>Customers</h1>
+    </div>
+    <div class="customers">
+        <nz-table #basicTable [nzData]="customers">
+            <thead>
+              <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Phone</th>
+                <th>Update</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let customer of customers">
+                <td>{{customer.id}}</td>
+                <td>{{customer.name}}</td>
+                <td>{{customer.email}}</td>
+                <td>{{customer.phone}}</td>
+                <td></td>
+              </tr>
+            </tbody>
+          </nz-table>
+    </div>
+</div>

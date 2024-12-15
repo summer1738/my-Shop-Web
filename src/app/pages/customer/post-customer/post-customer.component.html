@@ -1,0 +1,48 @@
+<nz-card 
+    style="width:100%; height: 70%;" 
+    nzTitle="Customer Form" 
+    [nzExtra]="extraTemplate">
+
+    <div class="centerForm">
+
+        <form nz-form [formGroup]="customerForm" class="login-form" (ngSubmit)="postCustomer()">
+       
+            <nz-form-item>
+              <nz-form-control nzErrorTip="Please input your username!">
+                <nz-input-group nzPrefixIcon="user">
+                  <input type="text" nz-input formControlName="name" placeholder="Customername" />
+                </nz-input-group>
+              </nz-form-control>
+            </nz-form-item>
+    
+            <nz-form-item>
+              <nz-form-control nzErrorTip="Please input your email!">
+                <nz-input-group nzPrefixIcon="mail">
+                  <input type="email" nz-input formControlName="email" placeholder="email@gmail.com" />
+                </nz-input-group>
+              </nz-form-control>
+            </nz-form-item>
+    
+            <nz-form-item>
+                <nz-form-control nzErrorTip="Please input your phone!">
+                  <nz-input-group nzPrefixIcon="phone">
+                    <input type="tel" nz-input formControlName="phone" placeholder="+263-" />
+                  </nz-input-group>
+                </nz-form-control>
+              </nz-form-item>
+      
+    
+            <button nz-button class="login-form-button login-form-margin" [nzType]="'primary'">Add Customer</button>
+    
+        </form>
+    
+
+    </div>
+
+    
+</nz-card>
+<ng-template #extraTemplate>
+    <a>More</a>
+</ng-template>
+<router-outlet></router-outlet>
+  
