@@ -10,7 +10,7 @@
                 <th>Name</th>
                 <th>Email</th>
                 <th>Phone</th>
-                <th>Update</th>
+                <th>Action</th>
               </tr>
             </thead>
             <tbody>
@@ -19,7 +19,23 @@
                 <td>{{customer.name}}</td>
                 <td>{{customer.email}}</td>
                 <td>{{customer.phone}}</td>
-                <td></td>
+                <td>
+                  <nz-row>
+                    <nz-col [nzSpan]="11">
+                      <button nz-button (click)="deleteCustomer(customer.id)">
+                        <span nz-icon nzType="delete" nzTheme="outline"></span>
+                      </button>
+                    </nz-col>
+                    <nz-col [nzSpan]="2">
+                      <nz-divider nzType="vertical"></nz-divider>
+                    </nz-col>
+                    <nz-col [nzSpan]="11">
+                      <button nz-button nzType="primary">
+                        <span nz-icon nzType="edit" nzTheme="outline"></span>
+                      </button>
+                    </nz-col>
+                  </nz-row>
+                </td>
               </tr>
             </tbody>
           </nz-table>

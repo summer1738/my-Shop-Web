@@ -20,14 +20,14 @@ export class CustomerServiceService {
   }
 
   getCustomerById(id: number): Observable<any> {
-    return this.httpClient.get(this.BASE_URL + "/customer" + id)
+    return this.httpClient.get(this.BASE_URL + "/customer/" + id)
   }
 
   updateCustomer(id: number, customer: any): Observable<any> {
-    return this.httpClient.put(this.BASE_URL + "/customer" + id, customer)
+    return this.httpClient.put(this.BASE_URL + "/customer/" + id, customer)
   }
   
   deleteCustomer(id: number): Observable<any> {
-    return this.httpClient.delete(this.BASE_URL + "/customer" + id)
+    return this.httpClient.delete(this.BASE_URL + "/customer/" + id)
   }
 }
